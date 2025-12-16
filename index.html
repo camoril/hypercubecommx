@@ -32,50 +32,9 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        /* Last.fm Grid Background */
-        #bg-grid {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-rows: 50vh;
-            z-index: -20;
-            opacity: 0.4; /* Dimmed background */
-            pointer-events: none; /* Allow clicks to pass through */
-        }
-        @media (min-width: 768px) {
-            #bg-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 33.33vh; }
-        }
-        @media (min-width: 1024px) {
-            #bg-grid { grid-template-columns: repeat(5, 1fr); grid-template-rows: repeat(2, 50vh); }
-        }
-
-        .track-img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s ease;
-            filter: grayscale(100%) brightness(0.5);
-        }
-        .track-img.loaded { opacity: 1; }
-        
-        /* Overlay to ensure text readability */
-        #bg-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95));
-            z-index: -10;
-        }
     </style>
 </head>
 <body class="bg-brand-dark text-slate-300 antialiased selection:bg-brand-accent selection:text-brand-dark">
-
-    <!-- Background Grid -->
-    <div id="bg-grid"></div>
-    <div id="bg-overlay"></div>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass border-b border-slate-800">
@@ -98,8 +57,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-        <!-- Background Elements (Removed abstract blobs, using grid now) -->
-        
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
                 Building the <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-500">Digital Future</span>
@@ -239,81 +202,6 @@
             </p>
         </div>
     </footer>
-
-    <!-- Last.fm Background Logic -->
-    <script>
-        const USER = 'camoril';
-        const API_KEY = '7a67bfe297bfe43956a01cab95dfc965';
-        const GRID = document.getElementById('bg-grid');
-        const SLOT_COUNT = 15; // Enough to fill screen
-        const artistImageCache = {};
-
-        // Initialize Grid Slots
-        function initGrid() {
-            GRID.innerHTML = '';
-            for (let i = 0; i < SLOT_COUNT; i++) {
-                const div = document.createElement('div');
-                div.className = 'overflow-hidden';
-                div.id = `slot-${i}`;
-                div.innerHTML = `<img class="track-img" src="" alt="">`;
-                GRID.appendChild(div);
-            }
-        }
-
-        async function getArtistImage(artistName) {
-            if (artistImageCache[artistName]) return artistImageCache[artistName];
-            try {
-                const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${encodeURIComponent(artistName)}&api_key=${API_KEY}&format=json`);
-                const data = await res.json();
-                const img = data.artist?.image?.[4]['#text'] || data.artist?.image?.[3]['#text'];
-                if (img) artistImageCache[artistName] = img;
-                return img;
-            } catch { return null; }
-        }
-
-        async function updateTracks() {
-            try {
-                const res = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${USER}&api_key=${API_KEY}&format=json&limit=${SLOT_COUNT}`);
-                const data = await res.json();
-                if (!data.recenttracks?.track) return;
-
-                const tracks = data.recenttracks.track;
-                
-                // Process images in parallel
-                const processed = await Promise.all(tracks.map(async (t) => {
-                    let img = t.image[3]['#text'];
-                    if (!img) img = await getArtistImage(t.artist['#text']);
-                    if (!img) img = 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png';
-                    return img;
-                }));
-
-                // Update DOM slots
-                processed.forEach((imgSrc, i) => {
-                    if (i >= SLOT_COUNT) return;
-                    const slot = document.getElementById(`slot-${i}`);
-                    const imgEl = slot.querySelector('.track-img');
-                    
-                    // Update Image only if changed
-                    if (imgEl.src !== imgSrc) {
-                        imgEl.classList.remove('loaded');
-                        const temp = new Image();
-                        temp.onload = () => {
-                            imgEl.src = imgSrc;
-                            imgEl.classList.add('loaded');
-                        };
-                        temp.src = imgSrc;
-                    } else {
-                        if (!imgEl.classList.contains('loaded')) imgEl.classList.add('loaded');
-                    }
-                });
-
-            } catch (e) { console.error(e); }
-        }
-
-        initGrid();
-        updateTracks();
-        setInterval(updateTracks, 15000); // Update every 15s
-    </script>
 
 </body>
 </html>
