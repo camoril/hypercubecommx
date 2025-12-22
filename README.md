@@ -25,6 +25,7 @@ The portfolio currently showcases the following projects:
 4.  **Genetic Algorithm**: Interactive AI evolution demonstration in PHP.
 5.  **Loan Calculator**: Financial amortization tool.
 6.  **Call Rating System**: CDR auditing and reporting system.
+7.  **Last.fm Visualizer**: Real-time music dashboard with API integration.
 
 ## 📦 Development
 
