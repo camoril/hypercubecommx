@@ -11,6 +11,8 @@ A minimalist, monochrome personal portfolio and project showcase built with mode
 ## ✅ Latest Update
 
 - Added a mobile navigation menu (hamburger toggle) in `index.html` to expose section links and language switch on small screens.
+- Migrated EN/ES to a single-page i18n flow in `index.html` (language toggle + localStorage persistence).
+- Converted `index_es.html` into a redirect shim that sets Spanish preference and forwards to `index.html`.
 
 ## 🛠️ Tech Stack
 
