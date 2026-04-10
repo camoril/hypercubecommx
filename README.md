@@ -8,6 +8,10 @@ A minimalist, monochrome personal portfolio and project showcase built with mode
 - **Glassmorphism**: Subtle transparency and blur effects for depth.
 - **Responsive**: Fully adaptive layout using CSS Grid and Flexbox.
 
+## ✅ Latest Update
+
+- Added a mobile navigation menu (hamburger toggle) in `index.html` to expose section links and language switch on small screens.
+
 ## 🛠️ Tech Stack
 
 - **Core**: HTML5
