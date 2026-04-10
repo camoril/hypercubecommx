@@ -31,27 +31,13 @@
     <meta name="description" content="Personal portfolio and project showcase.">
     <link rel="icon" type="image/png" href="img/hypercube.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#000000',
-                            accent: '#ffffff',
-                            secondary: '#a3a3a3'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #d1d5db;
+        }
         .glass {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -59,7 +45,7 @@
         }
     </style>
 </head>
-<body class="bg-brand-dark text-gray-300 antialiased selection:bg-brand-accent selection:text-brand-dark">
+<body class="bg-black text-gray-300 antialiased selection:bg-white selection:text-black">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVP46KLS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -74,14 +60,14 @@
                     <a href="." aria-label="Reload Page">
                         <img src="img/hypercube.svg" alt="Hypercube Logo" class="h-8 w-8 animate-[spin_10s_linear_infinite]">
                     </a>
-                    <span class="text-2xl font-bold text-white tracking-tighter">Hyper<span class="text-brand-accent">cube</span></span>
+                    <span class="text-2xl font-bold text-white tracking-tighter">Hyper<span class="text-white">cube</span></span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a id="navHomeDesktop" href="#home" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                         <a id="navProjectsDesktop" href="#projects" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
                         <a id="navAboutDesktop" href="#about" class="hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                        <a id="navContactDesktop" href="#contact" class="bg-brand-accent text-brand-dark hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-bold transition-colors">Contact</a>
+                        <a id="navContactDesktop" href="#contact" class="bg-white text-black hover:bg-gray-200 px-4 py-2 rounded-md text-sm font-bold transition-colors">Contact</a>
                         <button id="langToggleDesktop" type="button" class="text-gray-400 hover:text-white px-3 py-2 rounded-md text-sm font-bold transition-colors border border-gray-700 hover:border-white">ES</button>
                     </div>
                 </div>
@@ -98,7 +84,7 @@
                     <a id="navHomeMobile" href="#home" class="mobile-nav-link hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                     <a id="navProjectsMobile" href="#projects" class="mobile-nav-link hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
                     <a id="navAboutMobile" href="#about" class="mobile-nav-link hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                    <a id="navContactMobile" href="#contact" class="mobile-nav-link bg-brand-accent text-brand-dark hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-bold transition-colors">Contact</a>
+                    <a id="navContactMobile" href="#contact" class="mobile-nav-link bg-white text-black hover:bg-gray-200 px-3 py-2 rounded-md text-sm font-bold transition-colors">Contact</a>
                     <button id="langToggleMobile" type="button" class="mobile-nav-link text-left text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-bold transition-colors border border-gray-700 hover:border-white">ES</button>
                 </div>
             </div>
@@ -116,10 +102,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <div class="text-center md:text-left flex-1">
-                    <h1 id="heroTitle" class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"></h1>
-                    <p id="heroSubtitle" class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-10"></p>
+                    <h1 id="heroTitle" class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">Engineering the <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Digital Backbone</span></h1>
+                    <p id="heroSubtitle" class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto md:mx-0 mb-10">IT Manager specializing in Network Infrastructure, Cybersecurity, and Custom Development. Turning operational needs into robust technical solutions.</p>
                     <div class="flex justify-center md:justify-start gap-4">
-                        <a id="viewWorkCta" href="#projects" class="px-8 py-3 rounded-lg bg-brand-accent text-brand-dark font-bold hover:bg-gray-200 transition-all transform hover:scale-105"></a>
+                        <a id="viewWorkCta" href="#projects" class="px-8 py-3 rounded-lg bg-white text-black font-bold hover:bg-gray-200 transition-all transform hover:scale-105">View Work</a>
                         <a href="https://github.com/camoril" target="_blank" class="px-8 py-3 rounded-lg glass text-white font-semibold hover:bg-white/10 transition-all">
                             GitHub
                         </a>
@@ -137,213 +123,213 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 id="projectsHeading" class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
-                <div class="w-20 h-1 bg-brand-accent mx-auto rounded-full"></div>
+                <div class="w-20 h-1 bg-white mx-auto rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1: GW2 Roster -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">⚔️</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p1Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p1Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p1Title" class="text-xl font-bold text-white mb-2">GW2 Roster Manager</h3>
+                        <p id="p1Desc" class="text-gray-400 text-sm mb-4">Advanced squad management tool for Guild Wars 2 WvW. Features role filtering, boon analysis, and CSV export.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">HTML5</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">JS</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">HTML5</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">JS</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/gw2-teams" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p1ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/gw2-teams" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p1ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://hypercube.com.mx/gw2_roster" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p1LiveDemo"></span> <span>→</span>
+                            <a href="https://hypercube.com.mx/gw2_roster" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p1LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://hypercube.com.mx/gw2_roster', 'gw2')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p1Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://hypercube.com.mx/gw2_roster', 'gw2')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p1Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 2: Subnet Calculator -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">🌐</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p2Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p2Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p2Title" class="text-xl font-bold text-white mb-2">Subnet Calculator</h3>
+                        <p id="p2Desc" class="text-gray-400 text-sm mb-4">Visual IPv4 subnetting tool with binary tree visualization and state persistence.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Network</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Algorithms</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Network</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Algorithms</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/subnet" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p2ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/subnet" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p2ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://globalincom.com.mx/subnet" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p2LiveDemo"></span> <span>→</span>
+                            <a href="https://globalincom.com.mx/subnet" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p2LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://globalincom.com.mx/subnet', 'subnet')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p2Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://globalincom.com.mx/subnet', 'subnet')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p2Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card: Subnet 6 Calculator -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl font-bold text-gray-500">v6</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p3Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p3Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p3Title" class="text-xl font-bold text-white mb-2">IPv6 Subnet Calculator</h3>
+                        <p id="p3Desc" class="text-gray-400 text-sm mb-4">Advanced IPv6 network visualization tool with 128-bit precision, EUI-64 calculation, and PTR generation.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">IPv6</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">BigInt</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">IPv6</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">BigInt</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/subnet6" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p3ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/subnet6" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p3ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://globalincom.com.mx/subnet6" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p3LiveDemo"></span> <span>→</span>
+                            <a href="https://globalincom.com.mx/subnet6" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p3LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://globalincom.com.mx/subnet6', 'ipv6')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p3Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://globalincom.com.mx/subnet6', 'ipv6')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p3Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 3: GlobalIncom -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">🏢</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p4Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p4Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p4Title" class="text-xl font-bold text-white mb-2">GlobalIncom SPA</h3>
+                        <p id="p4Desc" class="text-gray-400 text-sm mb-4">Corporate Single Page Application with hash-based routing, dark mode, and SEO optimization.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">SPA</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Tailwind</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">SPA</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Tailwind</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/globalincommx" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p4ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/globalincommx" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p4ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://globalincom.com.mx" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p4LiveDemo"></span> <span>→</span>
+                            <a href="https://globalincom.com.mx" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p4LiveDemo">Live Demo</span> <span>→</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 4: Genetic Algorithm -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">🧬</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p5Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p5Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p5Title" class="text-xl font-bold text-white mb-2">Genetic Algorithm</h3>
+                        <p id="p5Desc" class="text-gray-400 text-sm mb-4">Interactive implementation of evolutionary principles (selection, crossover, mutation) to solve optimization problems.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">PHP</span>
-                            <span id="p5Tag2" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">AI</span>
-                            <span id="p5Tag3" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Algorithms</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">PHP</span>
+                            <span id="p5Tag2" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">AI</span>
+                            <span id="p5Tag3" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Algorithms</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/php" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p5ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/php" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p5ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://hypercube.com.mx/genetic/" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p5LiveDemo"></span> <span>→</span>
+                            <a href="https://hypercube.com.mx/genetic/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p5LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://hypercube.com.mx/genetic/', 'genetic')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p5Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://hypercube.com.mx/genetic/', 'genetic')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p5Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 5: Loan Calculator -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">💸</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p6Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p6Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p6Title" class="text-xl font-bold text-white mb-2">Loan Calculator</h3>
+                        <p id="p6Desc" class="text-gray-400 text-sm mb-4">Lightweight financial tool for calculating amortization schedules with support for various payment frequencies.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">PHP</span>
-                            <span id="p6Tag2" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Finance</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">PHP</span>
+                            <span id="p6Tag2" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Finance</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/php" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p6ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/php" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p6ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://hypercube.com.mx/prestamos/" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p6LiveDemo"></span> <span>→</span>
+                            <a href="https://hypercube.com.mx/prestamos/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p6LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://hypercube.com.mx/prestamos/', 'loan')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p6Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://hypercube.com.mx/prestamos/', 'loan')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p6Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 6: Call Rating System -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">📞</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p7Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p7Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p7Title" class="text-xl font-bold text-white mb-2">Call Rating System</h3>
+                        <p id="p7Desc" class="text-gray-400 text-sm mb-4">Modern web tool for auditing and reporting Call Detail Records (CDR) with CSV export and dynamic filtering.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">PHP</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">MySQL</span>
-                            <span id="p7Tag3" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Reporting</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">PHP</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">MySQL</span>
+                            <span id="p7Tag3" class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Reporting</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/php" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p7ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/php" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p7ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://hypercube.com.mx/tarifas/" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p7LiveDemo"></span> <span>→</span>
+                            <a href="https://hypercube.com.mx/tarifas/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p7LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://hypercube.com.mx/tarifas/', 'cdr')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p7Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://hypercube.com.mx/tarifas/', 'cdr')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p7Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project Card 7: Last.fm Visualizer -->
-                <div class="glass rounded-xl overflow-hidden hover:border-brand-accent/50 transition-all group">
+                <div class="glass rounded-xl overflow-hidden hover:border-white/50 transition-all group">
                     <div class="h-48 bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition-colors">
                         <span class="text-4xl">🎵</span>
                     </div>
                     <div class="p-6">
-                        <h3 id="p8Title" class="text-xl font-bold text-white mb-2"></h3>
-                        <p id="p8Desc" class="text-gray-400 text-sm mb-4"></p>
+                        <h3 id="p8Title" class="text-xl font-bold text-white mb-2">Last.fm Visualizer</h3>
+                        <p id="p8Desc" class="text-gray-400 text-sm mb-4">Real-time music dashboard showing recent tracks with artist imagery, loved status, and live playback indicators.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">API</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">JS</span>
-                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-brand-accent border border-gray-700">Grid</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">API</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">JS</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-800 text-white border border-gray-700">Grid</span>
                         </div>
                         <div class="flex gap-4">
-                            <a href="https://github.com/camoril/last.fm" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p8ViewProject"></span> <span>→</span>
+                            <a href="https://github.com/camoril/last.fm" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p8ViewProject">View Project</span> <span>→</span>
                             </a>
-                            <a href="https://hypercube.com.mx/lastfm/" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p8LiveDemo"></span> <span>→</span>
+                            <a href="https://hypercube.com.mx/lastfm/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p8LiveDemo">Live Demo</span> <span>→</span>
                             </a>
-                            <button onclick="openModal('https://hypercube.com.mx/lastfm/', 'lastfm')" class="text-brand-accent hover:text-white text-sm font-semibold flex items-center gap-1">
-                                <span id="p8Preview"></span> <span>👁️</span>
+                            <button onclick="openModal('https://hypercube.com.mx/lastfm/', 'lastfm')" class="text-white hover:text-gray-200 text-sm font-semibold flex items-center gap-1">
+                                <span id="p8Preview">Preview</span> <span>👁️</span>
                             </button>
                         </div>
                     </div>
@@ -356,21 +342,21 @@
     <section id="about" class="py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="glass rounded-2xl p-8 md:p-12 border border-gray-700">
-                <h2 id="aboutHeading" class="text-3xl font-bold text-white mb-6"></h2>
+                <h2 id="aboutHeading" class="text-3xl font-bold text-white mb-6">About Me</h2>
                 <div class="space-y-4 text-gray-300 leading-relaxed">
-                    <p id="aboutParagraph1"></p>
-                    <p id="aboutParagraph2"></p>
+                    <p id="aboutParagraph1">I am <strong class="text-white">Ernesto Pineda Batalla</strong>, an IT Manager specializing in network infrastructure and cybersecurity, currently leading the technology department at <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-gray-500 underline-offset-4">Global Incom</a>. My professional focus revolves around designing robust IT architectures, managing structured cabling projects, and ensuring operational continuity.</p>
+                    <p id="aboutParagraph2">Beyond infrastructure, I have a strong passion for software development and automation. I leverage my programming skills to build custom tools that optimize workflows and solve specific business problems. From creating genetic algorithms to developing web-based financial calculators, I enjoy bridging the gap between hardware operations and software solutions.</p>
                 </div>
                 
                 <div class="mt-8 pt-8 border-t border-gray-700">
-                    <h3 id="skillsHeading" class="text-xl font-semibold text-white mb-4"></h3>
+                    <h3 id="skillsHeading" class="text-xl font-semibold text-white mb-4">Skills</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span id="skill1" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600"></span>
-                        <span id="skill2" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600"></span>
+                        <span id="skill1" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">Network Infrastructure</span>
+                        <span id="skill2" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">IT Management</span>
                         <span class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">Python</span>
                         <span class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">PHP</span>
                         <span class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">JavaScript</span>
-                        <span id="skill6" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600"></span>
+                        <span id="skill6" class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">Automation</span>
                         <span class="px-3 py-1 rounded-md bg-gray-800 text-gray-200 border border-gray-600">Linux</span>
                     </div>
                 </div>
@@ -381,7 +367,7 @@
     <!-- Footer -->
     <footer id="contact" class="bg-slate-900 py-12 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 id="connectHeading" class="text-2xl font-bold text-white mb-6"></h2>
+            <h2 id="connectHeading" class="text-2xl font-bold text-white mb-6">Let's Connect</h2>
             <div class="flex justify-center gap-6 mb-8">
                 <a href="https://github.com/camoril" target="_blank" class="text-slate-400 hover:text-white transition-colors">
                     <span class="sr-only">GitHub</span>
@@ -396,7 +382,7 @@
                     <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.599v5.597z"/></svg>
                 </a>
             </div>
-            <p id="copyrightText" class="text-slate-500 text-sm"></p>
+            <p id="copyrightText" class="text-slate-500 text-sm">&copy; 2026 Hypercube. All rights reserved.</p>
         </div>
     </footer>
 
@@ -425,250 +411,13 @@
                         <iframe id="previewFrame" src="" class="w-full h-full border-0" title="Project Preview"></iframe>
                         <!-- Loading Indicator -->
                         <div id="modalLoader" class="absolute inset-0 flex items-center justify-center bg-gray-900 z-[-1]">
-                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-accent"></div>
+                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        const i18n = {
-            en: {
-                lang: 'en',
-                pageTitle: 'Hypercube | Portfolio',
-                metaDescription: 'Personal portfolio and project showcase.',
-                nav: { home: 'Home', projects: 'Projects', about: 'About', contact: 'Contact', switchLabel: 'ES' },
-                hero: {
-                    title: 'Engineering the <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Digital Backbone</span>',
-                    subtitle: 'IT Manager specializing in Network Infrastructure, Cybersecurity, and Custom Development. Turning operational needs into robust technical solutions.',
-                    cta: 'View Work'
-                },
-                sections: { projects: 'Featured Projects', about: 'About Me', skills: 'Skills', connect: 'Let\'s Connect' },
-                labels: { viewProject: 'View Project', liveDemo: 'Live Demo', preview: 'Preview', modalPreview: 'Project Preview', openNewTab: 'Open in new tab' },
-                projects: {
-                    gw2: { title: 'GW2 Roster Manager', desc: 'Advanced squad management tool for Guild Wars 2 WvW. Features role filtering, boon analysis, and CSV export.' },
-                    subnet: { title: 'Subnet Calculator', desc: 'Visual IPv4 subnetting tool with binary tree visualization and state persistence.' },
-                    ipv6: { title: 'IPv6 Subnet Calculator', desc: 'Advanced IPv6 network visualization tool with 128-bit precision, EUI-64 calculation, and PTR generation.' },
-                    globalincom: { title: 'GlobalIncom SPA', desc: 'Corporate Single Page Application with hash-based routing, dark mode, and SEO optimization.' },
-                    genetic: { title: 'Genetic Algorithm', desc: 'Interactive implementation of evolutionary principles (selection, crossover, mutation) to solve optimization problems.', tag2: 'AI', tag3: 'Algorithms' },
-                    loan: { title: 'Loan Calculator', desc: 'Lightweight financial tool for calculating amortization schedules with support for various payment frequencies.', tag2: 'Finance' },
-                    cdr: { title: 'Call Rating System', desc: 'Modern web tool for auditing and reporting Call Detail Records (CDR) with CSV export and dynamic filtering.', tag3: 'Reporting' },
-                    lastfm: { title: 'Last.fm Visualizer', desc: 'Real-time music dashboard showing recent tracks with artist imagery, "loved" status, and live playback indicators.' }
-                },
-                about: {
-                    p1: 'I am <strong class="text-white">Ernesto Pineda Batalla</strong>, an IT Manager specializing in network infrastructure and cybersecurity, currently leading the technology department at <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-gray-500 underline-offset-4">Global Incom</a>. My professional focus revolves around designing robust IT architectures, managing structured cabling projects, and ensuring operational continuity.',
-                    p2: 'Beyond infrastructure, I have a strong passion for software development and automation. I leverage my programming skills to build custom tools that optimize workflows and solve specific business problems. From creating genetic algorithms to developing web-based financial calculators, I enjoy bridging the gap between hardware operations and software solutions. Additionally, I am a dedicated promoter of Free Software and Open Knowledge, believing in the power of community-driven innovation.'
-                },
-                skills: { s1: 'Network Infrastructure', s2: 'IT Management', s6: 'Automation' },
-                footer: { copyright: '&copy; 2026 Hypercube. All rights reserved.' }
-            },
-            es: {
-                lang: 'es',
-                pageTitle: 'Hypercube | Portafolio',
-                metaDescription: 'Portafolio personal y muestra de proyectos.',
-                nav: { home: 'Inicio', projects: 'Proyectos', about: 'Sobre Mi', contact: 'Contacto', switchLabel: 'EN' },
-                hero: {
-                    title: 'Ingenieria de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Columna Digital</span>',
-                    subtitle: 'Gerente de TI especializado en Infraestructura de Red, Ciberseguridad y Desarrollo a Medida. Transformando necesidades operativas en soluciones tecnicas robustas.',
-                    cta: 'Ver Trabajo'
-                },
-                sections: { projects: 'Proyectos Destacados', about: 'Sobre Mi', skills: 'Habilidades', connect: 'Conectemos' },
-                labels: { viewProject: 'Ver Proyecto', liveDemo: 'Demo en Vivo', preview: 'Vista Previa', modalPreview: 'Vista Previa', openNewTab: 'Abrir en nueva pestana' },
-                projects: {
-                    gw2: { title: 'GW2 Roster Manager', desc: 'Herramienta avanzada de gestion de escuadrones para Guild Wars 2 WvW. Incluye filtrado de roles, analisis de bendiciones y exportacion CSV.' },
-                    subnet: { title: 'Calculadora de Subredes', desc: 'Herramienta visual de subredes IPv4 con visualizacion de arbol binario y persistencia de estado.' },
-                    ipv6: { title: 'Calculadora IPv6', desc: 'Herramienta avanzada de visualizacion de redes IPv6 con precision de 128 bits, calculo EUI-64 y generacion PTR.' },
-                    globalincom: { title: 'GlobalIncom SPA', desc: 'Aplicacion de Pagina Unica (SPA) corporativa con enrutamiento basado en hash, modo oscuro y optimizacion SEO.' },
-                    genetic: { title: 'Algoritmo Genetico', desc: 'Implementacion interactiva de principios evolutivos (seleccion, cruce, mutacion) para resolver problemas de optimizacion.', tag2: 'IA', tag3: 'Algoritmos' },
-                    loan: { title: 'Calculadora de Prestamos', desc: 'Herramienta financiera ligera para calcular tablas de amortizacion con soporte para varias frecuencias de pago.', tag2: 'Finanzas' },
-                    cdr: { title: 'Sistema de Tarificacion', desc: 'Herramienta web moderna para auditar y reportar Registros de Detalle de Llamadas (CDR) con exportacion CSV y filtrado dinamico.', tag3: 'Reportes' },
-                    lastfm: { title: 'Visualizador Last.fm', desc: 'Tablero de musica en tiempo real que muestra pistas recientes con imagenes de artistas, estado de "me gusta" e indicadores de reproduccion en vivo.' }
-                },
-                about: {
-                    p1: 'Soy <strong class="text-white">Ernesto Pineda Batalla</strong>, Gerente de TI especializado en infraestructura de red y ciberseguridad, actualmente liderando el departamento de tecnologia en <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-gray-500 underline-offset-4">Global Incom</a>. Mi enfoque profesional gira en torno al diseno de arquitecturas de TI robustas, la gestion de proyectos de cableado estructurado y garantizar la continuidad operativa.',
-                    p2: 'Mas alla de la infraestructura, tengo una gran pasion por el desarrollo de software y la automatizacion. Aprovecho mis habilidades de programacion para construir herramientas personalizadas que optimizan flujos de trabajo y resuelven problemas comerciales especificos. Desde la creacion de algoritmos geneticos hasta el desarrollo de calculadoras financieras web, disfruto uniendo las operaciones de hardware con soluciones de software. Ademas, soy un firme promotor del Software Libre y el Conocimiento Libre, creyendo en el poder de la innovacion impulsada por la comunidad.'
-                },
-                skills: { s1: 'Infraestructura de Red', s2: 'Gestion de TI', s6: 'Automatizacion' },
-                footer: { copyright: '&copy; 2026 Hypercube. Todos los derechos reservados.' }
-            }
-        };
-
-        let currentLang = 'en';
-
-        function setText(id, value) {
-            const element = document.getElementById(id);
-            if (element) {
-                element.textContent = value;
-            }
-        }
-
-        function setHtml(id, value) {
-            const element = document.getElementById(id);
-            if (element) {
-                element.innerHTML = value;
-            }
-        }
-
-        function applyLanguage(lang) {
-            const dictionary = i18n[lang] || i18n.en;
-            currentLang = dictionary.lang;
-
-            document.documentElement.lang = dictionary.lang;
-            document.title = dictionary.pageTitle;
-
-            const metaDescription = document.querySelector('meta[name="description"]');
-            if (metaDescription) {
-                metaDescription.setAttribute('content', dictionary.metaDescription);
-            }
-
-            setText('navHomeDesktop', dictionary.nav.home);
-            setText('navProjectsDesktop', dictionary.nav.projects);
-            setText('navAboutDesktop', dictionary.nav.about);
-            setText('navContactDesktop', dictionary.nav.contact);
-            setText('langToggleDesktop', dictionary.nav.switchLabel);
-            setText('navHomeMobile', dictionary.nav.home);
-            setText('navProjectsMobile', dictionary.nav.projects);
-            setText('navAboutMobile', dictionary.nav.about);
-            setText('navContactMobile', dictionary.nav.contact);
-            setText('langToggleMobile', dictionary.nav.switchLabel);
-
-            setHtml('heroTitle', dictionary.hero.title);
-            setText('heroSubtitle', dictionary.hero.subtitle);
-            setText('viewWorkCta', dictionary.hero.cta);
-
-            setText('projectsHeading', dictionary.sections.projects);
-            setText('p1Title', dictionary.projects.gw2.title);
-            setText('p1Desc', dictionary.projects.gw2.desc);
-            setText('p2Title', dictionary.projects.subnet.title);
-            setText('p2Desc', dictionary.projects.subnet.desc);
-            setText('p3Title', dictionary.projects.ipv6.title);
-            setText('p3Desc', dictionary.projects.ipv6.desc);
-            setText('p4Title', dictionary.projects.globalincom.title);
-            setText('p4Desc', dictionary.projects.globalincom.desc);
-            setText('p5Title', dictionary.projects.genetic.title);
-            setText('p5Desc', dictionary.projects.genetic.desc);
-            setText('p6Title', dictionary.projects.loan.title);
-            setText('p6Desc', dictionary.projects.loan.desc);
-            setText('p7Title', dictionary.projects.cdr.title);
-            setText('p7Desc', dictionary.projects.cdr.desc);
-            setText('p8Title', dictionary.projects.lastfm.title);
-            setText('p8Desc', dictionary.projects.lastfm.desc);
-
-            setText('p5Tag2', dictionary.projects.genetic.tag2);
-            setText('p5Tag3', dictionary.projects.genetic.tag3);
-            setText('p6Tag2', dictionary.projects.loan.tag2);
-            setText('p7Tag3', dictionary.projects.cdr.tag3);
-
-            ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8'].forEach(function(prefix) {
-                setText(prefix + 'ViewProject', dictionary.labels.viewProject);
-                setText(prefix + 'LiveDemo', dictionary.labels.liveDemo);
-                setText(prefix + 'Preview', dictionary.labels.preview);
-            });
-
-            setText('aboutHeading', dictionary.sections.about);
-            setHtml('aboutParagraph1', dictionary.about.p1);
-            setHtml('aboutParagraph2', dictionary.about.p2);
-            setText('skillsHeading', dictionary.sections.skills);
-            setText('skill1', dictionary.skills.s1);
-            setText('skill2', dictionary.skills.s2);
-            setText('skill6', dictionary.skills.s6);
-
-            setText('connectHeading', dictionary.sections.connect);
-            setHtml('copyrightText', dictionary.footer.copyright);
-
-            setText('modal-title', dictionary.labels.modalPreview);
-            const externalLink = document.getElementById('modal-external-link');
-            const previewFrame = document.getElementById('previewFrame');
-            if (externalLink) {
-                externalLink.title = dictionary.labels.openNewTab;
-            }
-            if (previewFrame) {
-                previewFrame.title = dictionary.labels.modalPreview;
-            }
-
-            localStorage.setItem('hypercube_lang', dictionary.lang);
-        }
-
-        function toggleLanguage() {
-            applyLanguage(currentLang === 'en' ? 'es' : 'en');
-        }
-
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuButton = document.getElementById('mobileMenuButton');
-            const isHidden = mobileMenu.classList.contains('hidden');
-
-            mobileMenu.classList.toggle('hidden');
-            menuButton.setAttribute('aria-expanded', String(isHidden));
-        }
-
-        function closeMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuButton = document.getElementById('mobileMenuButton');
-
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                menuButton.setAttribute('aria-expanded', 'false');
-            }
-        }
-
-        function openModal(url, projectKey) {
-            const modal = document.getElementById('previewModal');
-            const frame = document.getElementById('previewFrame');
-            const modalTitle = document.getElementById('modal-title');
-            const externalLink = document.getElementById('modal-external-link');
-            const dictionary = i18n[currentLang] || i18n.en;
-            const project = dictionary.projects[projectKey];
-            
-            modalTitle.textContent = project ? project.title : dictionary.labels.modalPreview;
-            externalLink.href = url;
-            frame.src = url;
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('previewModal');
-            const frame = document.getElementById('previewFrame');
-            
-            modal.classList.add('hidden');
-            frame.src = ''; // Stop loading/playing
-            document.body.style.overflow = ''; // Restore scrolling
-        }
-
-        // Close on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
-
-        const mobileMenuButton = document.getElementById('mobileMenuButton');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        const langToggleDesktop = document.getElementById('langToggleDesktop');
-        const langToggleMobile = document.getElementById('langToggleMobile');
-
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-        mobileNavLinks.forEach(function(link) {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        langToggleDesktop.addEventListener('click', toggleLanguage);
-        langToggleMobile.addEventListener('click', function() {
-            toggleLanguage();
-            closeMobileMenu();
-        });
-
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) {
-                closeMobileMenu();
-            }
-        });
-
-        const savedLanguage = localStorage.getItem('hypercube_lang');
-        applyLanguage(savedLanguage === 'es' ? 'es' : 'en');
-    </script>
+    <script defer src="main.js"></script>
 </body>
 </html>
