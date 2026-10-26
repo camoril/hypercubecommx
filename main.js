@@ -2,28 +2,29 @@ const i18n = {
     en: {
         lang: 'en',
         pageTitle: 'Hypercube | Portfolio',
-        metaDescription: 'Personal portfolio and project showcase.',
+        metaDescription: 'Ernesto Pineda Batalla — IT Manager specializing in network infrastructure, cybersecurity, and custom software development.',
         nav: { home: 'Home', projects: 'Projects', about: 'About', contact: 'Contact', switchLabel: 'ES' },
         hero: {
-            title: 'Engineering the <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Digital Backbone</span>',
-            subtitle: 'IT Manager specializing in Network Infrastructure, Cybersecurity, and Custom Development. Turning operational needs into robust technical solutions.',
+            title: 'Reliable systems for <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">critical operations.</span>',
+            subtitle: 'IT Manager specializing in network infrastructure, cybersecurity, and custom software development. Turning operational needs into robust technical solutions.',
             cta: 'View Work'
         },
         sections: { projects: 'Featured Projects', about: 'About Me', skills: 'Skills', connect: 'Let\'s Connect' },
-        labels: { viewProject: 'View Project', liveDemo: 'Live Demo', preview: 'Preview', modalPreview: 'Project Preview', openNewTab: 'Open in new tab' },
+        labels: { viewProject: 'View Project', liveDemo: 'Live Demo', preview: 'Preview', modalPreview: 'Project Preview', openNewTab: 'Open in new tab', docs: 'Documentation' },
+        fishbowl: { pause: 'Pause', resume: 'Resume', reduce: 'Reduce motion', normal: 'Normal motion', enable: 'Enable motion', metrics: 'Metrics' },
         projects: {
-            gw2: { title: 'GW2 Roster Manager', desc: 'Advanced squad management tool for Guild Wars 2 WvW. Features role filtering, boon analysis, and CSV export.' },
-            subnet: { title: 'Subnet Calculator', desc: 'Visual IPv4 subnetting tool with binary tree visualization and state persistence.' },
-            ipv6: { title: 'IPv6 Subnet Calculator', desc: 'Advanced IPv6 network visualization tool with 128-bit precision, EUI-64 calculation, and PTR generation.' },
-            globalincom: { title: 'GlobalIncom SPA', desc: 'Corporate Single Page Application with hash-based routing, dark mode, and SEO optimization.' },
-            genetic: { title: 'Genetic Algorithm', desc: 'Interactive implementation of evolutionary principles (selection, crossover, mutation) to solve optimization problems.', tag2: 'AI', tag3: 'Algorithms' },
-            loan: { title: 'Loan Calculator', desc: 'Lightweight financial tool for calculating amortization schedules with support for various payment frequencies.', tag2: 'Finance' },
-            cdr: { title: 'Call Rating System', desc: 'Modern web tool for auditing and reporting Call Detail Records (CDR) with CSV export and dynamic filtering.', tag3: 'Reporting' },
-            lastfm: { title: 'Last.fm Visualizer', desc: 'Real-time music dashboard showing recent tracks with artist imagery, loved status, and live playback indicators.' }
+            interventor: { title: 'Interventor', tag: 'Service Management', desc: 'Web system for managing technical service interventions with digital client signature, PDF generation, role-based access, and Docker deployment.' },
+            subnet: { title: 'Subnet Calculator', tag: 'Networking', desc: 'Visual IPv4 subnetting tool with binary tree visualization and state persistence.' },
+            ipv6: { title: 'IPv6 Subnet Calculator', tag: 'Networking', desc: 'Advanced IPv6 network visualization tool with 128-bit precision, EUI-64 calculation, and PTR generation.' },
+            globalincom: { title: 'GlobalIncom SPA', tag: 'Corporate Web', desc: 'Corporate Single Page Application with hash-based routing, dark mode, and SEO optimization.' },
+            genetic: { title: 'Genetic Algorithm', tag: 'AI / Algorithms', desc: 'Interactive implementation of evolutionary principles (selection, crossover, mutation) to solve optimization problems.', tag2: 'AI', tag3: 'Algorithms' },
+            loan: { title: 'Loan Calculator', tag: 'Finance', desc: 'Lightweight financial tool for calculating amortization schedules with support for various payment frequencies.', tag2: 'Finance' },
+            cdr: { title: 'Call Rating System', tag: 'Reporting', desc: 'Modern web tool for auditing and reporting Call Detail Records (CDR) with CSV export and dynamic filtering.', tag3: 'Reporting' },
+            lastfm: { title: 'Last.fm Visualizer', tag: 'API / Music', desc: 'Real-time music dashboard showing recent tracks with artist imagery, loved status, and live playback indicators.' }
         },
         about: {
-            p1: 'I am <strong class="text-white">Ernesto Pineda Batalla</strong>, an IT Manager specializing in network infrastructure and cybersecurity, currently leading the technology department at <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-gray-500 underline-offset-4">Global Incom</a>. My professional focus revolves around designing robust IT architectures, managing structured cabling projects, and ensuring operational continuity.',
-            p2: 'Beyond infrastructure, I have a strong passion for software development and automation. I leverage my programming skills to build custom tools that optimize workflows and solve specific business problems. From creating genetic algorithms to developing web-based financial calculators, I enjoy bridging the gap between hardware operations and software solutions. Additionally, I am a dedicated promoter of Free Software and Open Knowledge, believing in the power of community-driven innovation.'
+            p1: 'I am <strong class="text-white">Ernesto Pineda Batalla</strong>, an IT Manager focused on network infrastructure, cybersecurity, and custom software development. I currently lead the technology function at <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-neutral-500 underline-offset-4">Global Incom</a>, where I design and operate IT architectures, manage structured cabling and network projects, and maintain continuity across business-critical systems.',
+            p2: 'I work at the intersection of infrastructure and software: translating operational needs into practical, maintainable solutions. I value clear documentation, automation, security by design, and long-term reliability over quick fixes. I also support free and open-source software as a practical path to transparency and reuse.'
         },
         skills: { s1: 'Network Infrastructure', s2: 'IT Management', s6: 'Automation' },
         footer: { copyright: '&copy; 2026 Hypercube. All rights reserved.' }
@@ -31,28 +32,29 @@ const i18n = {
     es: {
         lang: 'es',
         pageTitle: 'Hypercube | Portafolio',
-        metaDescription: 'Portafolio personal y muestra de proyectos.',
-        nav: { home: 'Inicio', projects: 'Proyectos', about: 'Sobre Mi', contact: 'Contacto', switchLabel: 'EN' },
+        metaDescription: 'Ernesto Pineda Batalla — IT Manager especializado en infraestructura de red, ciberseguridad y desarrollo de software a medida.',
+        nav: { home: 'Inicio', projects: 'Proyectos', about: 'Sobre mí', contact: 'Contacto', switchLabel: 'EN' },
         hero: {
-            title: 'Ingenieria de la <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Columna Digital</span>',
-            subtitle: 'Gerente de TI especializado en Infraestructura de Red, Ciberseguridad y Desarrollo a Medida. Transformando necesidades operativas en soluciones tecnicas robustas.',
+            title: 'Sistemas confiables para <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-500">operaciones críticas.</span>',
+            subtitle: 'IT Manager especializado en infraestructura de red, ciberseguridad y desarrollo de software a medida. Convierto necesidades operativas en soluciones técnicas robustas.',
             cta: 'Ver Trabajo'
         },
-        sections: { projects: 'Proyectos Destacados', about: 'Sobre Mi', skills: 'Habilidades', connect: 'Conectemos' },
-        labels: { viewProject: 'Ver Proyecto', liveDemo: 'Demo en Vivo', preview: 'Vista Previa', modalPreview: 'Vista Previa', openNewTab: 'Abrir en nueva pestana' },
+        sections: { projects: 'Proyectos Destacados', about: 'Sobre mí', skills: 'Habilidades', connect: 'Conectemos' },
+        labels: { viewProject: 'Ver Proyecto', liveDemo: 'Demo en Vivo', preview: 'Vista Previa', modalPreview: 'Vista Previa', openNewTab: 'Abrir en nueva pestaña', docs: 'Documentación' },
+        fishbowl: { pause: 'Pausar', resume: 'Reanudar', reduce: 'Reducir movimiento', normal: 'Movimiento normal', enable: 'Activar movimiento', metrics: 'Métricas' },
         projects: {
-            gw2: { title: 'GW2 Roster Manager', desc: 'Herramienta avanzada de gestion de escuadrones para Guild Wars 2 WvW. Incluye filtrado de roles, analisis de bendiciones y exportacion CSV.' },
-            subnet: { title: 'Calculadora de Subredes', desc: 'Herramienta visual de subredes IPv4 con visualizacion de arbol binario y persistencia de estado.' },
-            ipv6: { title: 'Calculadora IPv6', desc: 'Herramienta avanzada de visualizacion de redes IPv6 con precision de 128 bits, calculo EUI-64 y generacion PTR.' },
-            globalincom: { title: 'GlobalIncom SPA', desc: 'Aplicacion de Pagina Unica (SPA) corporativa con enrutamiento basado en hash, modo oscuro y optimizacion SEO.' },
-            genetic: { title: 'Algoritmo Genetico', desc: 'Implementacion interactiva de principios evolutivos (seleccion, cruce, mutacion) para resolver problemas de optimizacion.', tag2: 'IA', tag3: 'Algoritmos' },
-            loan: { title: 'Calculadora de Prestamos', desc: 'Herramienta financiera ligera para calcular tablas de amortizacion con soporte para varias frecuencias de pago.', tag2: 'Finanzas' },
-            cdr: { title: 'Sistema de Tarificacion', desc: 'Herramienta web moderna para auditar y reportar Registros de Detalle de Llamadas (CDR) con exportacion CSV y filtrado dinamico.', tag3: 'Reportes' },
-            lastfm: { title: 'Visualizador Last.fm', desc: 'Tablero de musica en tiempo real que muestra pistas recientes con imagenes de artistas, estado de me gusta e indicadores de reproduccion en vivo.' }
+            interventor: { title: 'Interventor', tag: 'Gestión de Servicios', desc: 'Sistema web para gestionar intervenciones de servicio técnico con firma digital del cliente, generación de PDF, roles de usuario y despliegue con Docker.' },
+            subnet: { title: 'Calculadora de Subredes', tag: 'Redes', desc: 'Herramienta visual de subredes IPv4 con visualización de árbol binario y persistencia de estado.' },
+            ipv6: { title: 'Calculadora IPv6', tag: 'Redes', desc: 'Herramienta avanzada de visualización de redes IPv6 con precisión de 128 bits, cálculo EUI-64 y generación PTR.' },
+            globalincom: { title: 'GlobalIncom SPA', tag: 'Web corporativa', desc: 'Aplicación de Página Única (SPA) corporativa con enrutamiento basado en hash, modo oscuro y optimización SEO.' },
+            genetic: { title: 'Algoritmo Genético', tag: 'IA / Algoritmos', desc: 'Implementación interactiva de principios evolutivos (selección, cruce, mutación) para resolver problemas de optimización.', tag2: 'IA', tag3: 'Algoritmos' },
+            loan: { title: 'Calculadora de Préstamos', tag: 'Finanzas', desc: 'Herramienta financiera ligera para calcular tablas de amortización con soporte para varias frecuencias de pago.', tag2: 'Finanzas' },
+            cdr: { title: 'Sistema de Tarificación', tag: 'Reportes', desc: 'Herramienta web moderna para auditar y reportar Registros de Detalle de Llamadas (CDR) con exportación CSV y filtrado dinámico.', tag3: 'Reportes' },
+            lastfm: { title: 'Visualizador Last.fm', tag: 'API / Música', desc: 'Tablero de música en tiempo real que muestra pistas recientes con imágenes de artistas, estado de me gusta e indicadores de reproducción en vivo.' }
         },
         about: {
-            p1: 'Soy <strong class="text-white">Ernesto Pineda Batalla</strong>, Gerente de TI especializado en infraestructura de red y ciberseguridad, actualmente liderando el departamento de tecnologia en <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-gray-500 underline-offset-4">Global Incom</a>. Mi enfoque profesional gira en torno al diseno de arquitecturas de TI robustas, la gestion de proyectos de cableado estructurado y garantizar la continuidad operativa.',
-            p2: 'Mas alla de la infraestructura, tengo una gran pasion por el desarrollo de software y la automatizacion. Aprovecho mis habilidades de programacion para construir herramientas personalizadas que optimizan flujos de trabajo y resuelven problemas comerciales especificos. Desde la creacion de algoritmos geneticos hasta el desarrollo de calculadoras financieras web, disfruto uniendo las operaciones de hardware con soluciones de software. Ademas, soy un firme promotor del Software Libre y el Conocimiento Libre, creyendo en el poder de la innovacion impulsada por la comunidad.'
+            p1: 'Soy <strong class="text-white">Ernesto Pineda Batalla</strong>, IT Manager enfocado en infraestructura de red, ciberseguridad y desarrollo de software a medida. Actualmente lidero el área de tecnología en <a href="https://globalincom.com.mx" target="_blank" class="text-white hover:underline decoration-neutral-500 underline-offset-4">Global Incom</a>, donde diseño y opero arquitecturas de TI, gestiono proyectos de cableado estructurado y redes, y aseguro la continuidad de sistemas críticos para el negocio.',
+            p2: 'Trabajo en la intersección entre infraestructura y software: traduzco necesidades operativas en soluciones prácticas y mantenibles. Valoro la documentación clara, la automatización, la seguridad desde el diseño y la confiabilidad a largo plazo por encima de las soluciones rápidas. También apoyo el software libre y el conocimiento abierto como una vía práctica para la transparencia y la reutilización.'
         },
         skills: { s1: 'Infraestructura de Red', s2: 'Gestion de TI', s6: 'Automatizacion' },
         footer: { copyright: '&copy; 2026 Hypercube. Todos los derechos reservados.' }
@@ -119,8 +121,9 @@ function applyLanguage(lang) {
     setText('viewWorkCta', dictionary.hero.cta);
 
     setText('projectsHeading', dictionary.sections.projects);
-    setText('p1Title', dictionary.projects.gw2.title);
-    setText('p1Desc', dictionary.projects.gw2.desc);
+    setText('p1Title', dictionary.projects.interventor.title);
+    setText('p1Desc', dictionary.projects.interventor.desc);
+    setText('p1Docs', dictionary.labels.docs);
     setText('p2Title', dictionary.projects.subnet.title);
     setText('p2Desc', dictionary.projects.subnet.desc);
     setText('p3Title', dictionary.projects.ipv6.title);
@@ -169,6 +172,92 @@ function applyLanguage(lang) {
     }
 
     setStoredLanguage(dictionary.lang);
+    syncFishbowlCards(dictionary);
+    syncFishbowlLabels(dictionary);
+}
+
+const fishbowlProjectOrder = ['interventor', 'subnet', 'ipv6', 'globalincom', 'genetic', 'loan', 'cdr', 'lastfm'];
+
+function syncFishbowlCards(dictionary) {
+    window.GALAXY_TRANSLATIONS = {};
+    fishbowlProjectOrder.forEach(function(key) {
+        const project = dictionary.projects[key];
+        if (project) {
+            window.GALAXY_TRANSLATIONS[key] = {
+                title: project.title,
+                tag: project.tag || '',
+                description: project.desc || ''
+            };
+        }
+    });
+
+    const cards = document.querySelectorAll('#galaxy .galaxy-card');
+    cards.forEach(function(card, index) {
+        const key = fishbowlProjectOrder[index];
+        const project = dictionary.projects[key];
+        if (!project) {
+            return;
+        }
+        const title = card.querySelector('.galaxy-card__title');
+        const tag = card.querySelector('.galaxy-card__tag');
+        if (title) {
+            title.textContent = project.title;
+        }
+        if (tag) {
+            tag.textContent = project.tag || '';
+        }
+    });
+}
+
+function syncFishbowlLabels(dictionary) {
+    const labels = dictionary.fishbowl || {};
+    setText('galaxy-debug', labels.metrics || 'Metrics');
+    if (window.GalaxyIntro && typeof window.GalaxyIntro.setLabels === 'function') {
+        window.GalaxyIntro.setLabels(labels);
+    }
+}
+
+function initHeroVideo() {
+    const video = document.getElementById('galaxy-bg-video');
+    const stage = document.getElementById('galaxy-stage');
+    if (!video) {
+        return;
+    }
+
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const saveData = navigator.connection && navigator.connection.saveData;
+    if (reduceMotion || saveData) {
+        video.pause();
+        return;
+    }
+
+    const play = function() {
+        const promise = video.play();
+        if (promise && promise.catch) {
+            promise.catch(function() {});
+        }
+    };
+
+    play();
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            video.pause();
+        } else {
+            play();
+        }
+    });
+
+    if (stage && window.MutationObserver) {
+        const sync = function() {
+            if (stage.classList.contains('is-paused') || stage.classList.contains('is-reduced')) {
+                video.pause();
+            } else {
+                play();
+            }
+        };
+        new MutationObserver(sync).observe(stage, { attributes: true, attributeFilter: ['class'] });
+    }
 }
 
 function toggleLanguage() {
@@ -271,4 +360,31 @@ window.addEventListener('resize', function() {
 });
 
 const savedLanguage = getStoredLanguage();
-applyLanguage(savedLanguage === 'es' ? 'es' : 'en');
+const urlLanguage = new URLSearchParams(window.location.search).get('lang');
+const scrollTarget = new URLSearchParams(window.location.search).get('scroll');
+const compactView = new URLSearchParams(window.location.search).has('compact');
+const initialLanguage = (urlLanguage === 'es' || urlLanguage === 'en') ? urlLanguage : savedLanguage;
+applyLanguage(initialLanguage === 'es' ? 'es' : 'en');
+
+if (compactView) {
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        homeSection.style.display = 'none';
+    }
+}
+
+window.addEventListener('load', function() {
+    const dictionary = i18n[currentLang] || i18n.en;
+    syncFishbowlCards(dictionary);
+    syncFishbowlLabels(dictionary);
+    initHeroVideo();
+    if (scrollTarget) {
+        const target = document.getElementById(scrollTarget);
+        if (target) {
+            const previousBehavior = document.documentElement.style.scrollBehavior;
+            document.documentElement.style.scrollBehavior = 'auto';
+            window.scrollTo(0, target.offsetTop);
+            document.documentElement.style.scrollBehavior = previousBehavior;
+        }
+    }
+});

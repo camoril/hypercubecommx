@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Galaxy · Prototipo Hypercube</title>
+  <meta name="description" content="Prototipo aislado de una intro 3D con tarjetas de video en espiral para el portafolio Hypercube.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#050505">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23050505'/%3E%3Cpath d='M16 6l9 5v10l-9 5-9-5V11z' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3Cpath d='M16 6v20M7 11l9 5 9-5' fill='none' stroke='%23ffffff' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/galaxy.css">
+</head>
+<body>
+  <a class="skip-link" href="#proyectos">Saltar la animación</a>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Volver al portafolio Hypercube">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16 4l10 6v12l-10 6-10-6V10z" fill="none" stroke="currentColor" stroke-width="2"></path>
+        <path d="M16 4v24M6 10l10 6 10-6" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+      </svg>
+      <span>Hypercube</span>
+    </a>
+    <span class="header-note">Prototipo aislado · noindex</span>
+  </header>
+
+  <main>
+    <section class="galaxy-stage" id="galaxy-stage" aria-label="Portada animada de proyectos">
+      <div class="galaxy" id="galaxy" aria-hidden="true"></div>
+      <div class="galaxy-core" aria-hidden="true">
+        <div class="galaxy-core__glow"></div>
+      </div>
+
+      <div class="galaxy-hero" id="galaxy-hero">
+        <div class="galaxy-cube" id="galaxy-cube" aria-hidden="true">
+          <div class="galaxy-cube__tilt">
+            <img class="galaxy-cube__spin" id="galaxy-cube-img" src="assets/hypercube.svg" alt="" width="92" height="92" decoding="async">
+          </div>
+        </div>
+        <p class="galaxy-kicker">Prototipo aislado · Intro Galaxy</p>
+        <h1 class="galaxy-title">Engineering the <span>Digital Backbone</span></h1>
+        <p class="galaxy-subtitle">
+          Mueve el puntero para inclinar la galaxia y haz clic en una tarjeta para ampliarla.
+          Los videos se reproducen en silencio y solo cuando la tarjeta está en pantalla.
+        </p>
+        <div class="galaxy-actions">
+          <a class="button button--primary" href="#proyectos">Ver proyectos</a>
+          <a class="button" href="../index.html">Volver al portafolio</a>
+        </div>
+      </div>
+
+      <aside class="galaxy-detail" id="galaxy-detail" aria-hidden="true">
+        <span class="galaxy-detail__tag" id="galaxy-detail-tag"></span>
+        <h2 class="galaxy-detail__title" id="galaxy-detail-title"></h2>
+        <p class="galaxy-detail__text" id="galaxy-detail-text"></p>
+        <a class="galaxy-detail__link" id="galaxy-detail-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Abrir proyecto →</a>
+      </aside>
+
+      <div class="galaxy-controls">
+        <button class="galaxy-control" id="galaxy-pause" type="button" aria-pressed="false">Pausar</button>
+        <button class="galaxy-control" id="galaxy-motion" type="button" aria-pressed="false">Reducir movimiento</button>
+        <button class="galaxy-control" id="galaxy-debug" type="button" aria-pressed="false">Métricas</button>
+      </div>
+      <div class="galaxy-hud" id="galaxy-hud" hidden></div>
+    </section>
+
+    <section class="project-list-section" id="proyectos">
+      <div class="project-list-header">
+        <h2>Proyectos</h2>
+        <p>
+          Esta lista es la versión accesible y sin animación de la portada. La galaxia es una mejora visual;
+          los enlaces reales, el texto y la navegación por teclado están aquí.
+        </p>
+      </div>
+      <div class="project-list" id="project-list"></div>
+
+      <noscript>
+        <div class="no-script">
+          <h2>Proyectos (sin JavaScript)</h2>
+          <ul>
+            <li><a href="https://hypercube.com.mx/gw2_roster">GW2 Roster Manager</a></li>
+            <li><a href="https://globalincom.com.mx/subnet">Subnet Calculator</a></li>
+            <li><a href="https://globalincom.com.mx/subnet6">IPv6 Subnet Calculator</a></li>
+            <li><a href="https://globalincom.com.mx">GlobalIncom SPA</a></li>
+            <li><a href="https://hypercube.com.mx/genetic/">Genetic Algorithm</a></li>
+            <li><a href="https://hypercube.com.mx/prestamos/">Loan Calculator</a></li>
+            <li><a href="https://hypercube.com.mx/tarifas/">Call Rating System</a></li>
+            <li><a href="https://hypercube.com.mx/lastfm/">Last.fm Visualizer</a></li>
+          </ul>
+        </div>
+      </noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Prototipo aislado en <code>intro-galaxy/</code>. No modifica el <code>index.html</code> principal.</p>
+    <p>
+      Inspirado en el concepto de galaxia de
+      <a href="https://getartcraft.com/" target="_blank" rel="noopener noreferrer">ArtCraft</a>;
+      implementación propia, sin reutilizar su código ni sus assets.
+    </p>
+  </footer>
+
+  <script src="config.js" defer></script>
+  <script src="js/galaxy-core.js" defer></script>
+  <script src="js/galaxy.js" defer></script>
+</body>
+</html>
+

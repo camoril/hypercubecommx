@@ -10,6 +10,15 @@ A minimalist, monochrome personal portfolio and project showcase built with mode
 
 ## ✅ Latest Update
 
+- Integrated the fishbowl intro as the main hero, preserving bilingual copy, analytics, SEO, project cards, modal and contact sections.
+- Added canonical, Open Graph, Twitter Cards and JSON-LD metadata.
+- Added `?lang=en|es` and `?scroll=<section>` query helpers for testing and deep links.
+- Updated the hero slogan to "Reliable systems for critical operations." / "Sistemas confiables para operaciones críticas.".
+- Restored the original PNG favicon.
+- Normalized the palette to black and neutral grays; replaced project emojis with monochrome labels.
+- Added a temporary grayscale clouds video as the hero background and a temporary hexagon loop for the fishbowl thumbnails.
+- Added optimized production videos in `img/` and ignored the original temporary source files.
+- Added light collision resolution between floating cards: maximum overlap is configurable (12% by default) and cards bounce softly.
 - Added a mobile navigation menu (hamburger toggle) in `index.html` to expose section links and language switch on small screens.
 - Migrated EN/ES to a single-page i18n flow in `index.html` (language toggle + localStorage persistence).
 - Converted `index_es.html` into a redirect shim that sets Spanish preference and forwards to `index.html`.
@@ -27,7 +36,7 @@ A minimalist, monochrome personal portfolio and project showcase built with mode
 
 The portfolio currently showcases the following projects:
 
-1.  **GW2 Roster Manager**: Squad management tool for Guild Wars 2.
+1.  **Interventor**: Web system for managing technical service interventions with digital client signature, PDF generation and Docker deployment.
 2.  **Subnet Calculator**: Visual IPv4 subnetting tool.
 3.  **GlobalIncom SPA**: Corporate Single Page Application.
 4.  **Genetic Algorithm**: Interactive AI evolution demonstration in PHP.

@@ -1,0 +1,16 @@
+# Los videos y posters grandes no se versionan por defecto.
+assets/videos/*
+!assets/videos/README.md
+!assets/videos/clouds.webm
+!assets/videos/clouds.mp4
+!assets/videos/hexagons.webm
+!assets/videos/hexagons.mp4
+
+assets/posters/*
+!assets/posters/README.md
+!assets/posters/clouds.webp
+!assets/posters/hexagons.webp
+
+# Temporales de herramientas
+*.tmp
+*.log
