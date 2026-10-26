@@ -61,6 +61,45 @@ python3 -m http.server
 
 Open `http://localhost:8000` in your browser.
 
+## 🚀 Deployment
+
+The site is deployed **manually through cPanel** (LiteSpeed host) and published at:
+
+**https://hypercube.com.mx/**
+
+There is no CI/CD pipeline and no GitHub Pages: after validating locally, upload the changed files to the web root (`public_html`).
+
+### Files to upload
+
+- `index.html`
+- `index_es.html` (redirect shim that sets Spanish preference)
+- `404.html`, `500.html`
+- `main.js`
+- `fishbowl.css`
+- `img/` (favicon, logos, `clouds.*`, `hexagons.*`)
+- `intro-galaxy/` — **required**: the hero loads `intro-galaxy/config.js`, `intro-galaxy/js/galaxy-core.js`, `intro-galaxy/js/galaxy.js` and `intro-galaxy/css/galaxy.css`
+
+### Post-deploy checklist
+
+```bash
+# 1. The published index.html must match the repository
+sha256sum index.html
+curl -s https://hypercube.com.mx/ | sha256sum
+
+# 2. Every critical asset must return HTTP 200
+for p in /fishbowl.css /main.js /img/clouds.webm /img/hexagons.webm \
+         /intro-galaxy/config.js /intro-galaxy/js/galaxy-core.js \
+         /intro-galaxy/js/galaxy.js /intro-galaxy/css/galaxy.css; do
+  curl -s -o /dev/null -w "$p -> %{http_code}\n" "https://hypercube.com.mx$p"
+done
+```
+
+- Confirm the hero animation renders and both languages work (`?lang=es`, `?lang=en`).
+- Confirm the project modal opens and the contact section is reachable.
+- Purge the LiteSpeed cache from cPanel if a change is not visible immediately.
+
+> The host currently sends no `Content-Security-Policy` header, so the Tailwind CDN, Google Fonts and analytics scripts load normally. If a CSP is added later, allow the origins listed in `TODO.md`.
+
 ## 📄 License
 
 All rights reserved.

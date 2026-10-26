@@ -20,6 +20,10 @@ All notable changes to this project are documented in this file.
 - Added light collision resolution between floating cards with configurable maximum overlap and a subtle bounce.
 - Removed the legacy index backup and temporary source videos; optimized assets live in `img/` and `intro-galaxy/assets/`.
 
+### Docs
+- Documented the manual cPanel deployment flow, the files to upload and a post-deploy verification checklist in `README.md`.
+- Verified production at https://hypercube.com.mx/: `index.html` hash matches the repository and all critical assets (including `intro-galaxy/`) return HTTP 200.
+
 ## [2026-04-10]
 ### Fixed
 - Resolved production blank-page issue caused by runtime dependence on inline JavaScript.
